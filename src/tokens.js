@@ -1,0 +1,15 @@
+export const D = {
+  bg:         "#ffffff",
+  surface:    "#f8f9fa",
+  card:       "#ffffff",
+  cardHov:    "#f1f3f5",
+  border:     "#dee2e6",
+  borderHov:  "#adb5bd",
+  primary:    "#0d6efd",
+  primaryDim: "#0d6efd20",
+  primaryLo:  "#0d6efd10",
+  text:       "#212529",
+  sub:        "#6c757d",
+  danger:     "#dc3545",
+  green:      "#198754",
+};
