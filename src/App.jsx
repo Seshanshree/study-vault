@@ -95,7 +95,7 @@ export default function App() {
                 {PW_REF.map((r, i) => (
                   <div key={i} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "0.3rem 0.5rem", borderBottom: i < PW_REF.length - 1 ? `1px solid ${D.border}` : "none" }}>
                     <span style={{ color: D.sub, fontSize: "0.8rem" }}>{r.label}</span>
-                    <code style={{ background: D.surface, border: `1px solid ${D.border}`, borderRadius: "3px", padding: "0.1rem 0.4rem", fontSize: "0.75rem" }}>
+                    <code style={{ background: D.surface, border: `1px solid ${D.border}`, borderRadius: "3px", padding: "0.1rem 0.4rem", fontSize: "0.75rem", color:"black" }}>
                       {r.pw}
                     </code>
                   </div>
@@ -112,7 +112,7 @@ export default function App() {
     content = (
       <div>
         <BackBtn onClick={goHome} />
-        <PageTitle icon="" title="Semester Schedule" />
+        <PageTitle style={{color:"brown"}} icon="" title="Semester Schedule" />
         <ImgSlot url={FILES.scheduleImg} label="Semester Schedule" />
       </div>
     );

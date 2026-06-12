@@ -8,9 +8,7 @@ export const PASS = {
   sub2: "wco003",
   sub3: "rfs004",
   sub4: "cne005",
-  sub5: "cts006",
-  sub6: "mpc007",
-  sub7: "opt008",
+  
 };
 
 export const SUBJECTS = [
@@ -18,17 +16,14 @@ export const SUBJECTS = [
   "Digital Signal Processing",
   "Wireless Communication",
   "Transmission Lines And RF Systems",
-  "Computer Networks",
-  "Control Systems",
-  "Microprocessors & Controllers",
-  "Optical Communication",
+
 ];
 
 export const LABS = [
-  "DSP Lab",
-  "VLSI Lab",
-  "Embedded Systems Lab",
-  "Communication Lab",
+  "Analog And Digital Communication Laboratory",
+  "Mini - Project",
+  "Soft Skills And Personality Development Laboratory",
+  "",
 ];
 
 
