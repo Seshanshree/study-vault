@@ -9,12 +9,24 @@ export default function HomeCard({ icon, label, desc, onClick }) {
       onMouseEnter={() => setHov(true)}
       onMouseLeave={() => setHov(false)}
       style={{
-        background: hov ? D.cardHov : D.card,
+        position: "relative",
+        overflow: "hidden",
+        background: hov
+          ? `linear-gradient(145deg, ${D.cardHov}, ${D.card})`
+          : `linear-gradient(145deg, ${D.card}, ${D.surface})`,
         border: `1px solid ${hov ? D.borderHov : D.border}`,
-        borderRadius: "6px", padding: "1rem",
-        cursor: "pointer", transition: "all 0.1s",
+        borderRadius: "14px",
+        padding: "1rem",
+        cursor: "pointer",
+        transition: "transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease",
+        transform: hov ? "translateY(-6px) rotateX(5deg) scale(1.01)" : "translateY(0) rotateX(0deg) scale(1)",
+        transformStyle: "preserve-3d",
+        boxShadow: hov
+          ? "0 18px 30px rgba(0, 0, 0, 0.14), 0 8px 16px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.85)"
+          : "0 10px 18px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.7)",
       }}
     >
+      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(255,255,255,0.28), transparent 45%)", pointerEvents: "none" }} />
       <div style={{ fontSize: "1.5rem", marginBottom: "0.5rem" }}>{icon}</div>
       <div style={{ fontWeight: 600, marginBottom: "0.25rem" }}>{label}</div>
       <div style={{ color: D.sub, fontSize: "0.8rem" }}>{desc}</div>

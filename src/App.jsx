@@ -39,21 +39,15 @@ export default function App() {
   const goSection = () => setSubIdx(null);
 
   const HOME_ITEMS = [
-    { id: "schedule",  label: "Semester Schedule",   icon: "", desc: "Full semester plan",          pw: PASS.schedule  },
-    { id: "timetable", label: "Time Table",          icon: "", desc: "Weekly class schedule",       pw: PASS.timetable },
-    { id: "syllabus",  label: "Syllabus",            icon: "", desc: "8 subjects covered",          pw: PASS.syllabus  },
-    { id: "notes",     label: "Notes",               icon: "", desc: "5 units + internal QPs",      pw: PASS.notes     },
-    { id: "records",   label: "Lab Record PDFs",     icon: "", desc: "4 lab records",               pw: PASS.records   },
-    { id: "pyq",       label: "Prev. Year Papers",   icon: "", desc: "2 papers per subject",        pw: PASS.pyq       },
+    { id: "schedule",  label: "Semester Schedule",   icon: "", desc: "Full semester plan" },
+    { id: "timetable", label: "Time Table",          icon: "", desc: "Weekly class schedule" },
+    { id: "syllabus",  label: "Syllabus",            icon: "", desc: "8 subjects covered" },
+    { id: "notes",     label: "Notes",               icon: "", desc: "5 units + internal QPs" },
+    { id: "records",   label: "Lab Record PDFs",     icon: "", desc: "4 lab records" },
+    { id: "pyq",       label: "Prev. Year Papers",   icon: "", desc: "2 papers per subject" },
   ];
 
   const PW_REF = [
-    { label: "Semester Schedule",    pw: PASS.schedule  },
-    { label: "Time Table",           pw: PASS.timetable },
-    { label: "Syllabus",             pw: PASS.syllabus  },
-    { label: "Notes",                pw: PASS.notes     },
-    { label: "Lab Records",          pw: PASS.records   },
-    { label: "Previous Year Papers", pw: PASS.pyq       },
     ...SUBJECTS.map((s, i) => ({ label: `Subject — ${s}`, pw: PASS[`sub${i}`] })),
   ];
 
@@ -75,7 +69,7 @@ export default function App() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: "1rem" }}>
           {HOME_ITEMS.map((item) => (
             <HomeCard key={item.id} icon={item.icon} label={item.label} desc={item.desc}
-              onClick={() => askPw(item.pw, () => setView(item.id))}
+              onClick={() => setView(item.id)}
             />
           ))}
         </div>
@@ -227,14 +221,18 @@ export default function App() {
 
   return (
     <div style={{
-      minHeight: "100vh", background: D.bg, color: D.text,
+      minHeight: "100vh",
+      background: `radial-gradient(circle at top, ${D.primaryLo} 0%, ${D.bg} 34%, ${D.bg} 100%)`,
+      color: D.text,
       fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+      perspective: "1400px",
     }}>
       <header style={{
         position: "sticky", top: 0, zIndex: 50,
-        background: D.surface, borderBottom: `1px solid ${D.border}`,
+        background: `linear-gradient(180deg, ${D.surface}, ${D.bg})`, borderBottom: `1px solid ${D.border}`,
         padding: "0 1rem", height: "48px",
         display: "flex", alignItems: "center", justifyContent: "space-between",
+        boxShadow: "0 6px 18px rgba(0, 0, 0, 0.06)",
       }}>
         <button onClick={goHome} style={{ background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center", gap: "0.5rem", padding: 0, fontWeight: 600, fontSize: "1rem", color: D.text }}>
           StudyVault
@@ -262,7 +260,7 @@ export default function App() {
               onChange={e => { setPwInput(e.target.value); setPwError(""); }}
               onKeyDown={e => e.key === "Enter" && submitPw()}
               placeholder="Enter password" autoFocus
-              style={{ width: "100%", boxSizing: "border-box", border: `1px solid ${pwError ? D.danger : D.border}`, borderRadius: "4px", padding: "0.5rem", marginBottom: "0.5rem", fontSize: "0.9rem", backgroundColor: "transparent" }}
+              style={{ width: "100%", boxSizing: "border-box", border: `1px solid ${pwError ? D.danger : D.border}`, borderRadius: "4px", padding: "0.5rem", marginBottom: "0.5rem", fontSize: "0.9rem", color:"black", backgroundColor: "transparent" }}
             />
             {pwError && <div style={{ color: D.danger, fontSize: "0.75rem", marginBottom: "0.5rem" }}>{pwError}</div>}
             <div style={{ display: "flex", gap: "0.5rem", marginTop: "0.5rem" }}>

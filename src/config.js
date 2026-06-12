@@ -2,12 +2,7 @@ import scheduleImg from "./assets/schedule.jpeg";
 import dspU1 from "./assets/Unit_1_Notes.pdf";
 
 export const PASS = {
-  schedule:  "sch001",
-  timetable: "tt0002",
-  syllabus:  "syl003",
-  notes:     "nte004",
-  records:   "rec005",
-  pyq:       "pyq006",
+  
   sub0: "dsp001",
   sub1: "vls002",
   sub2: "wco003",
