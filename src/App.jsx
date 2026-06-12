@@ -39,7 +39,7 @@ export default function App() {
   const goSection = () => setSubIdx(null);
 
   const HOME_ITEMS = [
-    { id: "schedule",  label: "Semester Schedule",  icon: "", desc: "Full semester plan",          pw: PASS.schedule  },
+    { id: "schedule",  label: "Semester Schedule",   icon: "", desc: "Full semester plan",          pw: PASS.schedule  },
     { id: "timetable", label: "Time Table",          icon: "", desc: "Weekly class schedule",       pw: PASS.timetable },
     { id: "syllabus",  label: "Syllabus",            icon: "", desc: "8 subjects covered",          pw: PASS.syllabus  },
     { id: "notes",     label: "Notes",               icon: "", desc: "5 units + internal QPs",      pw: PASS.notes     },
@@ -163,7 +163,7 @@ export default function App() {
           <div style={{ fontWeight: 600, marginBottom: "0.5rem", marginTop: "1rem" }}>Unit Notes</div>
           <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem", marginBottom: "1.5rem" }}>
             {d.units.map((url, ui) =>
-              ui === 4
+              ui === 5
                 ? <PdfCard key={ui} title="Unit 5 — Notes" comingSoon />
                 : <PdfCard key={ui} title={`Unit ${ui + 1} — Notes`} url={url} />
             )}
@@ -193,7 +193,7 @@ export default function App() {
       <div>
         <BackBtn onClick={goHome} />
         <PageTitle icon="" title="Lab Record PDFs" />
-        <p style={{ color: D.sub, fontSize: "0.85rem", marginBottom: "1.5rem" }}>Record PDFs for all 4 labs in Semester 6.</p>
+        <p style={{ color: D.sub, fontSize: "0.85rem", marginBottom: "1.5rem" }}>Record PDFs for all 4 labs in Semester 5.</p>
         <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
           {LABS.map((lab, i) => (
             <PdfCard key={i} title={`${lab} — Record`} url={FILES.records[i]} />
@@ -240,7 +240,7 @@ export default function App() {
           StudyVault
         </button>
         <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-          <span style={{ fontSize: "0.7rem", background: D.surface, border: `1px solid ${D.border}`, padding: "0.2rem 0.5rem", borderRadius: "4px" }}>SEM 6</span>
+          <span style={{ fontSize: "0.7rem", background: D.surface, border: `1px solid ${D.border}`, padding: "0.2rem 0.5rem", borderRadius: "4px" }}>SEM 5</span>
           <span style={{ color: D.sub, fontSize: "0.8rem" }}>ECE</span>
         </div>
       </header>

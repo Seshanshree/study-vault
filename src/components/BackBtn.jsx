@@ -14,7 +14,7 @@ export default function BackBtn({ onClick }) {
         padding: "0.2rem 0", marginBottom: "1rem", fontSize: "0.85rem",
       }}
     >
-      ? Back
+      Back
     </button>
   );
 }
