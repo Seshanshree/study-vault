@@ -3,10 +3,10 @@ import dspU1 from "./assets/Unit_1_Notes.pdf";
 
 export const PASS = {
 
-  sub0: "dsp001",
-  sub1: "vls002",
+  sub0: "dco001",
+  sub1: "dsp002",
   sub2: "wco003",
-  sub3: "emb004",
+  sub3: "rfs004",
   sub4: "cne005",
   sub5: "cts006",
   sub6: "mpc007",
@@ -14,10 +14,10 @@ export const PASS = {
 };
 
 export const SUBJECTS = [
+  "Digital Communication",
   "Digital Signal Processing",
-  "VLSI Design",
   "Wireless Communication",
-  "Embedded Systems",
+  "Transmission Lines And RF Systems",
   "Computer Networks",
   "Control Systems",
   "Microprocessors & Controllers",
