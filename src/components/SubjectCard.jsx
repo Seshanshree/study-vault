@@ -35,7 +35,9 @@ export default function SubjectCard({ name, onClick }) {
   );
 }
 
+
 export function Portfolio() {
+  const [showImage, setShowImage] = useState(false);
   const cardStyle = {
     maxWidth: "620px",
     margin: "0 auto",
@@ -71,25 +73,28 @@ export function Portfolio() {
       >
         <div style={{ display: "flex", alignItems: "center", gap: "1rem", flexWrap: "wrap" }}>
           <div
-  style={{
-    width: "88px",
-    height: "88px",
-    borderRadius: "50%",
-    overflow: "hidden",
-    border: `1px solid ${D.borderHov}`,
-    flex: "0 0 auto",
-  }}
->
-  <img
-    src={seshanImg}
-    alt="Seshanshree"
-    style={{
-      width: "100%",
-      height: "100%",
-      objectFit: "cover",
-    }}
-  />
-</div>
+            style={{
+              width: "88px",
+              height: "88px",
+              borderRadius: "50%",
+              overflow: "hidden",
+              border: `1px solid ${D.borderHov}`,
+              flex: "0 0 auto",
+            }}
+          >
+            <img
+              src={seshanImg}
+              alt="Seshanshree"
+              onClick={() => setShowImage(true)}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                display: "block",
+                cursor: "pointer",
+              }}
+            />
+          </div>
 
           <div style={{ minWidth: 0, flex: "1 1 240px" }}>
             <div style={{ color: D.primary, fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "0.35rem" }}>
@@ -170,10 +175,48 @@ export function Portfolio() {
           </a>
         </div>
 
-        <p style={{ marginTop: "1.25rem", marginBottom: 0, color: D.sub, fontSize: "0.8rem", textAlign: "center" }}>
-          Study-Vault by iMaXx
-        </p>
-      </div>
-    </section>
-  );
+        <p
+  style={{
+    marginTop: "1.25rem",
+    marginBottom: 0,
+    color: D.sub,
+    fontSize: "0.8rem",
+    textAlign: "center",
+  }}
+>
+  Study-Vault by iMaXx
+</p>
+</div>
+
+{/* Image Popup */}
+{showImage && (
+  <div
+    onClick={() => setShowImage(false)}
+    style={{
+      position: "fixed",
+      inset: 0,
+      background: "rgba(0,0,0,0.8)",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      zIndex: 1000,
+      cursor: "pointer",
+    }}
+  >
+    <img
+      src={seshanImg}
+      alt="Seshanshree"
+      style={{
+        maxWidth: "90%",
+        maxHeight: "90%",
+        borderRadius: "20px",
+        boxShadow: "0 20px 40px rgba(0,0,0,0.4)",
+      }}
+      onClick={(e) => e.stopPropagation()}
+    />
+  </div>
+)}
+
+</section>
+);
 }

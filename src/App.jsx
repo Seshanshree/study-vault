@@ -286,51 +286,51 @@ export default function App() {
         </div>
       )}
       {view !== "developer" && (
-  <footer
-    style={{
-      borderTop: `1px solid ${D.border}`,
-      marginTop: "2rem",
-      padding: "2rem 1rem",
-      background: D.surface,
-    }}
-  >
-    <div
-      onClick={() => setView("developer")}
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        padding: "1rem 1.2rem",
-        border: `1px solid ${D.border}`,
-        borderRadius: "12px",
-        background: D.card,
-        cursor: "pointer",
-        transition: "all 0.2s ease",
-        boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
-      }}
-    >
-      <div>
-        <div
+        <footer
           style={{
-            fontWeight: 600,
-            color: D.text,
+            borderTop: `1px solid ${D.border}`,
+            marginTop: "2rem",
+            padding: "2rem 1rem",
+            background: D.surface,
           }}
         >
-          Meet the Developer
-        </div>
-      </div>
+          <div
+            onClick={() => setView("developer")}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              padding: "1rem 1.2rem",
+              border: `1px solid ${D.border}`,
+              borderRadius: "12px",
+              background: D.card,
+              cursor: "pointer",
+              transition: "all 0.2s ease",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
+            }}
+          >
+            <div>
+              <div
+                style={{
+                  fontWeight: 600,
+                  color: D.text,
+                }}
+              >
+                Meet the Developer
+              </div>
+            </div>
 
-      <div
-        style={{
-          fontSize: "1.3rem",
-          color: D.primary,
-        }}
-      >
-        →
-      </div>
-    </div>
-  </footer>
-)}
+            <div
+              style={{
+                fontSize: "1.3rem",
+                color: D.primary,
+              }}
+            >
+              →
+            </div>
+          </div>
+        </footer>
+      )}
     </div>
   );
 }
