@@ -1,22 +1,23 @@
 import { useState } from "react";
 import { PASS, SUBJECTS, LABS, FILES } from "./config";
 import { D } from "./tokens";
-import HomeCard    from "./components/HomeCard";
-import BackBtn     from "./components/BackBtn";
-import Breadcrumb  from "./components/Breadcrumb";
-import PageTitle   from "./components/PageTitle";
+import HomeCard from "./components/HomeCard";
+import BackBtn from "./components/BackBtn";
+import Breadcrumb from "./components/Breadcrumb";
+import PageTitle from "./components/PageTitle";
 import SubjectGrid from "./components/SubjectGrid";
-import ImgSlot     from "./components/ImgSlot";
-import PdfCard     from "./components/PdfCard";
+import ImgSlot from "./components/ImgSlot";
+import PdfCard from "./components/PdfCard";
+import { Portfolio } from "./components/SubjectCard";
 
 export default function App() {
-  const [view,   setView]   = useState("home");
+  const [view, setView] = useState("home");
   const [subIdx, setSubIdx] = useState(null);
-  const [modal,    setModal]    = useState(null);
-  const [pwInput,  setPwInput]  = useState("");
+  const [modal, setModal] = useState(null);
+  const [pwInput, setPwInput] = useState("");
   const [pwTarget, setPwTarget] = useState("");
-  const [pwError,  setPwError]  = useState("");
-  const [showPws,  setShowPws]  = useState(false);
+  const [pwError, setPwError] = useState("");
+  const [showPws, setShowPws] = useState(false);
 
   const askPw = (correctPw, onSuccess) => {
     setPwTarget(correctPw);
@@ -35,16 +36,16 @@ export default function App() {
     }
   };
 
-  const goHome    = () => { setView("home"); setSubIdx(null); };
+  const goHome = () => { setView("home"); setSubIdx(null); };
   const goSection = () => setSubIdx(null);
 
   const HOME_ITEMS = [
-    { id: "schedule",  label: "Semester Schedule",   icon: "", desc: "Full semester plan" },
-    { id: "timetable", label: "Time Table",          icon: "", desc: "Weekly class schedule" },
-    { id: "syllabus",  label: "Syllabus",            icon: "", desc: "8 subjects covered" },
-    { id: "notes",     label: "Notes",               icon: "", desc: "5 units + internal QPs" },
-    { id: "records",   label: "Lab Record PDFs",     icon: "", desc: "4 lab records" },
-    { id: "pyq",       label: "Prev. Year Papers",   icon: "", desc: "2 papers per subject" },
+    { id: "schedule", label: "Semester Schedule", icon: "", desc: "Full semester plan" },
+    { id: "timetable", label: "Time Table", icon: "", desc: "Weekly class schedule" },
+    { id: "syllabus", label: "Syllabus", icon: "", desc: "8 subjects covered" },
+    { id: "notes", label: "Notes", icon: "", desc: "5 units + internal QPs" },
+    { id: "records", label: "Lab Record PDFs", icon: "", desc: "4 lab records" },
+    { id: "pyq", label: "Prev. Year Papers", icon: "", desc: "2 papers per subject" },
   ];
 
   const PW_REF = [
@@ -95,7 +96,7 @@ export default function App() {
                 {PW_REF.map((r, i) => (
                   <div key={i} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "0.3rem 0.5rem", borderBottom: i < PW_REF.length - 1 ? `1px solid ${D.border}` : "none" }}>
                     <span style={{ color: D.sub, fontSize: "0.8rem" }}>{r.label}</span>
-                    <code style={{ background: D.surface, border: `1px solid ${D.border}`, borderRadius: "3px", padding: "0.1rem 0.4rem", fontSize: "0.75rem", color:"black" }}>
+                    <code style={{ background: D.surface, border: `1px solid ${D.border}`, borderRadius: "3px", padding: "0.1rem 0.4rem", fontSize: "0.75rem", color: "black" }}>
                       {r.pw}
                     </code>
                   </div>
@@ -112,7 +113,7 @@ export default function App() {
     content = (
       <div>
         <BackBtn onClick={goHome} />
-        <PageTitle style={{color:"brown"}} icon="" title="Semester Schedule" />
+        <PageTitle style={{ color: "brown" }} icon="" title="Semester Schedule" />
         <ImgSlot url={FILES.scheduleImg} label="Semester Schedule" />
       </div>
     );
@@ -218,6 +219,20 @@ export default function App() {
       </div>
     );
   }
+  else if (view === "developer") {
+    content = (
+      <div>
+        <BackBtn onClick={goHome} />
+
+        <PageTitle
+          icon=""
+          title="Developer"
+        />
+
+        <Portfolio />
+      </div>
+    );
+  }
 
   return (
     <div style={{
@@ -270,6 +285,52 @@ export default function App() {
           </div>
         </div>
       )}
+      {view !== "developer" && (
+  <footer
+    style={{
+      borderTop: `1px solid ${D.border}`,
+      marginTop: "2rem",
+      padding: "2rem 1rem",
+      background: D.surface,
+    }}
+  >
+    <div
+      onClick={() => setView("developer")}
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        padding: "1rem 1.2rem",
+        border: `1px solid ${D.border}`,
+        borderRadius: "12px",
+        background: D.card,
+        cursor: "pointer",
+        transition: "all 0.2s ease",
+        boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
+      }}
+    >
+      <div>
+        <div
+          style={{
+            fontWeight: 600,
+            color: D.text,
+          }}
+        >
+          Meet the Developer
+        </div>
+      </div>
+
+      <div
+        style={{
+          fontSize: "1.3rem",
+          color: D.primary,
+        }}
+      >
+        →
+      </div>
+    </div>
+  </footer>
+)}
     </div>
   );
 }
