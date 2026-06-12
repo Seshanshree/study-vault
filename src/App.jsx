@@ -260,7 +260,7 @@ export default function App() {
               onChange={e => { setPwInput(e.target.value); setPwError(""); }}
               onKeyDown={e => e.key === "Enter" && submitPw()}
               placeholder="Enter password" autoFocus
-              style={{ width: "100%", boxSizing: "border-box", border: `1px solid ${pwError ? D.danger : D.border}`, borderRadius: "4px", padding: "0.5rem", marginBottom: "0.5rem", fontSize: "0.9rem", color:"black", backgroundColor: "transparent" }}
+              style={{ width: "100%", boxSizing: "border-box", border: `1px solid ${pwError ? D.danger : D.border}`, borderRadius: "4px", padding: "0.5rem", marginBottom: "0.5rem", fontSize: "0.9rem", backgroundColor: "transparent" }}
             />
             {pwError && <div style={{ color: D.danger, fontSize: "0.75rem", marginBottom: "0.5rem" }}>{pwError}</div>}
             <div style={{ display: "flex", gap: "0.5rem", marginTop: "0.5rem" }}>

@@ -2,7 +2,7 @@ import scheduleImg from "./assets/schedule.jpeg";
 import dspU1 from "./assets/Unit_1_Notes.pdf";
 
 export const PASS = {
-  
+
   sub0: "dsp001",
   sub1: "vls002",
   sub2: "wco003",
