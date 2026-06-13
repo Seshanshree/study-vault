@@ -168,7 +168,7 @@ export default function LoginPage({ onAuth }) {
               {field("Roll Number",
                 <input value={lRoll} onChange={e => { setLRoll(e.target.value); clearErr(); }}
                   onKeyDown={onKey(handleLogin)}
-                  placeholder="e.g. 22ECE001"
+                  placeholder="e.g. 24ECE044"
                   style={inputStyle(error && !lRoll)}
                 />
               )}
@@ -186,7 +186,7 @@ export default function LoginPage({ onAuth }) {
           {mode === "register" && step === 1 && (
             <>
               <p style={{ margin: "0 0 1.25rem", color: D.sub, fontSize: "0.85rem" }}>
-                Create your profile — takes 30 seconds.
+                Create your profile
               </p>
               {field("Full Name",
                 <input value={name} onChange={e => { setName(e.target.value); clearErr(); }}
@@ -198,7 +198,7 @@ export default function LoginPage({ onAuth }) {
               {field("Roll Number",
                 <input value={rollNo} onChange={e => { setRollNo(e.target.value); clearErr(); }}
                   onKeyDown={onKey(handleRegister)}
-                  placeholder="e.g. 22ECE001"
+                  placeholder="e.g. 24ECE044"
                   style={inputStyle(error && !rollNo)}
                 />
               )}
