@@ -18,7 +18,7 @@
   ╚═══╝  ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝      
 ```
 
-###  Your Semester 5 ECE Knowledge Hub — Built by Students, for Students
+###  Your Semester 5 ECE Knowledge Hub — Built by **Seshanshree** for Students, for Students
 
 [![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://sem-5-vault.vercel.app/)
 [![Built with Love](https://img.shields.io/badge/Built%20with-%20%26%20JavaScript-blue?style=for-the-badge)]()
