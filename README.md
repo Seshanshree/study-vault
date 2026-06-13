@@ -32,144 +32,70 @@
 
 ---
 
-## ╔══════════════════════════════════════╗
-## ║          WHAT IS STUDY VAULT?        ║
-## ╚══════════════════════════════════════╝
+## [ WHAT IS STUDY VAULT? ]
 
-**Study Vault** is a centralized, student-built notes & resource platform designed specifically for **Semester 5 ECE students at Government College of Engineering, Bargur (GCE Bargur)**. Created by [Seshanshree](https://github.com/Seshanshree) , this platform eliminates the chaos of scattered notes and last-minute exam panic.
+**Study Vault** is a centralized, student-built notes and resource platform designed for **Semester 5 ECE students at Government College of Engineering, Bargur**. Created by [Seshanshree](https://github.com/Seshanshree), this platform eliminates the chaos of scattered notes and last-minute exam panic.
 
-No more *"bro send me the notes"*. Everything is right here. 
+No more *"bro send me the notes"*. Everything is right here.
 
 ---
 
-## ╔══════════════════════════════════════╗
-## ║              KEY FEATURES            ║
-## ╚══════════════════════════════════════╝
+## [ KEY FEATURES ]
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│                                                         │
-│       Subject-wise Organized Notes                      │
-│        └── Clean folders per subject, no mess           │
-│                                                         │
-│       Multi-format Resource Support                     │
-│        └── PDFs, slides, handwritten scans & more       │
-│                                                         │
-│       Fast & Easy Navigation                            │
-│        └── Find what you need in seconds                │
-│                                                         │
-│       Mobile-Friendly Design                            │
-│        └── Study anywhere — phone, tablet, laptop       │
-│                                                         │
-│       Always Online via Vercel                          │
-│        └── Zero downtime, instant global access         │
-│                                                         │
-│       Peer-Contributed Content                          │
-│        └── Notes from real students who survived Sem 5  │
-│                                                         │
-└─────────────────────────────────────────────────────────┘
+Subject-wise Organized Notes
+ └── Clean sections per subject, no mess
+
+Multi-format Resource Support
+ └── PDFs, slides, handwritten scans
+
+Fast & Easy Navigation
+ └── Find what you need in seconds
+
+Mobile-Friendly Design
+ └── Study anywhere, any device
+
+Always Online via Vercel
+ └── Zero downtime, instant access
+
+Peer-Contributed Content
+ └── Notes from students who survived Sem 5
 ```
 
 ---
 
-## ╔══════════════════════════════════════╗
-## ║             SUBJECTS COVERED         ║
-## ╚══════════════════════════════════════╝
+## [ SUBJECTS COVERED ]
 
-> Curated for the **ECE Semester 5 syllabus** at GCE Bargur
+Curated for the **ECE Semester 5 syllabus** at GCE Bargur
 
 | # | Subject | Status |
 |---|---------|--------|
-| 01 | Digital Communication | ✅ Available |
-| 02 | Digital Signal Processing (DSP) | ✅ Available |
-| 03 | Wireless Communication | ✅ Available |
-| 04 | Transmission Lines And RF Systems | ✅ Available |
+| 01 | Digital Communication | Available |
+| 02 | Digital Signal Processing | Available |
+| 03 | Wireless Communication | Available |
+| 04 | Transmission Lines & RF Systems | Available |
 
 ---
 
-## ╔══════════════════════════════════════╗
-## ║              TECH STACK              ║
-## ╚══════════════════════════════════════╝
-
-```
-                    ┌─────────────────────┐
-                    │     STUDY VAULT     │
-                    │    Architecture     │
-                    └──────────┬──────────┘
-                               │
-           ┌───────────────────┼───────────────────┐
-           │                   │                   │
-    ┌──────▼──────┐    ┌───────▼──────┐    ┌───────▼──────┐
-    │  Frontend   │    │   Hosting    │    │   Content    │
-    │  React.j    │    │              │    │              │
-    │  HTML5      │    │  Vercel      │    │  PDFs        │
-    │  CSS3       │    │  (Serverless)│    │  Slides      │
-    │  JavaScript │    │  Auto-deploy │    │  Docs        │
-    └─────────────┘    └──────────────┘    └──────────────┘
-```
+## [ TECH STACK ]
 
 | Layer | Technology | Purpose |
 |-------|-----------|---------|
-|  Frontend | React.js, HTML, CSS, JavaScript | UI & interactivity |
-|  Deployment | Vercel | Hosting & CI/CD |
-|  Content | Static files / Drive embeds | Notes & resources |
-|  Responsive | CSS Flexbox/Grid | Mobile-first layout |
+| Frontend | React.js, HTML, CSS, JS | UI & interactivity |
+| Deployment | Vercel | Hosting & CI/CD |
+| Content | Static files / Drive embeds | Notes & resources |
+| Responsive | CSS Flexbox / Grid | Mobile-first layout |
 
 ---
 
-## ╔══════════════════════════════════════╗
-## ║           GETTING STARTED            ║
-## ╚══════════════════════════════════════╝
+## [ GETTING STARTED ]
 
-###  Use it Directly (Recommended)
+### Use it Directly — Recommended
 
-Just open your browser and go:
+Open your browser and visit:
 
 ```
 https://sem-5-vault.vercel.app/
-```
-
-
----
-
-###  Run Locally (For Developers)
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/Seshanshree/sem-5-vault.git
-
-# 2. Navigate into the project
-cd sem-5-vault
-
-# 3. Open in your browser
-# Option A — Direct open
-open index.html
-
-# Option B — Use VS Code Live Server
-# Right-click index.html → "Open with Live Server"
-
-# Option C — Use Python server
-python -m http.server 3000
-# Then visit: http://localhost:3000
-```
-
----
-
-## ╔══════════════════════════════════════╗
-## ║              CREATORS                ║
-## ╚══════════════════════════════════════╝
-
-```
-╭────────────────────────────────────────╮
-│                                        │
-│      Seshanshree                       │
-│       CEO & Founder — iMaXx            │
-│       Full Stack Developer             │
-│       ECE, GCE Bargur                  │
-│       github.com/Seshanshree           │
-│                                        │
-│                                        │
-╰────────────────────────────────────────╯
 ```
 
 ---
@@ -179,17 +105,17 @@ python -m http.server 3000
 <div align="center">
 
 ```
-╔══════════════════════════════════════════════════╗
-║                                                  ║
-║   If this helped you pass your exams,            ║
-║   give the repo a ⭐ — it takes 2 seconds        ║
-║   and means the world to us                      ║
-║                                                  ║
-║           Made with ❤️ at GCE Bargur             ║
-║                                                  ║
-╚══════════════════════════════════════════════════╝
+.------------------------------------------------.
+|                                                |
+|  If this helped you pass your exams,           |
+|  drop a star on the repo.                      |
+|  It takes 2 seconds and means a lot.           |
+|                                                |
+|         Made with dedication at GCE Bargur     |
+|                                                |
+'------------------------------------------------'
 ```
 
-**[🌐 Visit Study Vault](https://sem-5-vault.vercel.app/)** • **[ Report a Bug](https://github.com/Seshanshree/sem-5-vault/issues)** • **[ Request a Feature](https://github.com/Seshanshree/sem-5-vault/issues)**
+[Visit Study Vault](https://sem-5-vault.vercel.app/) &nbsp;|&nbsp; [Report a Bug](https://github.com/Seshanshree/sem-5-vault/issues) &nbsp;|&nbsp; [Request a Feature](https://github.com/Seshanshree/sem-5-vault/issues)
 
 </div>
