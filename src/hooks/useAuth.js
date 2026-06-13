@@ -1,6 +1,6 @@
 // ── PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL HERE ──────────
-const SHEET_WEBHOOK = "https://script.google.com/macros/s/AKfycbype2iW_-X7in3X4SDX_GXJtBi2HipLc2qAzmJVqL2vsSSoWQa_nmhsOOKRxZtq-hFo/exec";
-
+// const SHEET_WEBHOOK = "https://script.google.com/macros/s/AKfycbype2iW_-X7in3X4SDX_GXJtBi2HipLc2qAzmJVqL2vsSSoWQa_nmhsOOKRxZtq-hFo/exec";
+const SHEET_WEBHOOK = import.meta.env.VITE_SHEET_WEBHOOK;
 const KEY      = "sv_user";
 const ALL_KEY  = "sv_all_users";
 
