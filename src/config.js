@@ -1,4 +1,16 @@
 import scheduleImg from "./assets/schedule.jpeg";
+import timetableImg from "./assets/timetable.jpeg";
+import dco from "./assets/syllabus/dco.jpg";
+import dsp from "./assets/syllabus/dsp.jpg";
+import wco from "./assets/syllabus/wco.jpg";
+import rfs from "./assets/syllabus/rfs.jpg";
+import fpgat from "./assets/syllabus/fpga_theory.jpg";
+import had from "./assets/syllabus/had.jpg";
+import aanddlab from "./assets/syllabus/a&d lab.jpg";
+import mp from "./assets/syllabus/miniproject.jpg";
+import skillslab from "./assets/syllabus/skills lab.jpg";
+import dsplab from "./assets/timetable.jpeg";
+import fpgalab from "./assets/syllabus/fpga lab.jpg";
 import dspU1 from "./assets/Unit_1_Notes.pdf";
 
 export const PASS = {
@@ -7,7 +19,13 @@ export const PASS = {
   sub1: "dsp002",
   sub2: "wco003",
   sub3: "rfs004",
-  sub4: "cne005",
+  sub4: "fpga005",
+  sub5: "had006",
+  sub6: "adc007",
+  sub7: "mp008",
+  sub8: "sspd009",
+  sub9: "dsp010",
+  sub10: "fpga011"
   
 };
 
@@ -16,6 +34,13 @@ export const SUBJECTS = [
   "Digital Signal Processing",
   "Wireless Communication",
   "Transmission Lines And RF Systems",
+  "PE-1(Digital Design with FPGA)",
+  "PE-2(Human Assist Devices)",
+  "Analog And Digital Communication Laboratory",
+  "Mini - Project",
+  "Soft Skills And Personality Development Laboratory",
+  "Digital Signal Processing (Integrated Lab)",
+  "PE-1[Digital Dising with FPGA(Integrated Lab)",
 
 ];
 
@@ -23,14 +48,27 @@ export const LABS = [
   "Analog And Digital Communication Laboratory",
   "Mini - Project",
   "Soft Skills And Personality Development Laboratory",
-  "",
+  "Digital Signal Processing (Integrated Lab)",
+  "PE-1[Digital Dising with FPGA(Integrated Lab)",
 ];
 
 
 export const FILES = {
   scheduleImg,
-  timetableImg: null,
-  syllabusImgs: Array(8).fill(null),
+  timetableImg,
+  syllabusImgs: [
+    dco,
+    dsp,
+    wco,
+    rfs,
+    fpgat,
+    had,
+    aanddlab,
+    mp,
+    skillslab,
+    dsplab,
+    fpgalab
+  ],
 
   notes: [
     // 0 — Digital Signal Processing
