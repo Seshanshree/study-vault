@@ -15,7 +15,7 @@ export default function PdfCard({ title, url, comingSoon }) {
         a.click();
         URL.revokeObjectURL(a.href);
       })
-      .catch(() => window.open(url, "_blank"));
+      .catch(() => window.open(url, "_blank", "noopener,noreferrer"));
   };
 
   if (comingSoon) {
@@ -40,17 +40,22 @@ export default function PdfCard({ title, url, comingSoon }) {
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         <span style={{ fontWeight: 500 }}>{title}</span>
         <div style={{ display: "flex", gap: "0.5rem" }}>
-          <a href={url || "#"} target="_blank" rel="noopener noreferrer" style={{
-            textDecoration: "none",
-            background: url ? D.primaryDim : D.surface,
-            color: url ? D.primary : D.sub,
-            border: `1px solid ${url ? D.primary : D.border}`,
-            borderRadius: "4px", padding: "0.2rem 0.6rem",
-            fontSize: "0.75rem", fontWeight: 500,
-            cursor: url ? "pointer" : "default",
-            pointerEvents: url ? "auto" : "none",
-          }}>
-             Open
+          <a
+            href={url || "#"}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              textDecoration: "none",
+              background: url ? D.primaryDim : D.surface,
+              color: url ? D.primary : D.sub,
+              border: `1px solid ${url ? D.primary : D.border}`,
+              borderRadius: "4px", padding: "0.2rem 0.6rem",
+              fontSize: "0.75rem", fontWeight: 500,
+              cursor: url ? "pointer" : "default",
+              pointerEvents: url ? "auto" : "none",
+            }}
+          >
+            Open
           </a>
           {url && (
             <button onClick={handleDownload} style={{

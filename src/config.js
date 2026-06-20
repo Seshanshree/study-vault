@@ -12,9 +12,9 @@ import skillslab from "./assets/syllabus/skills lab.jpg";
 import dsplab from "./assets/timetable.jpeg";
 import fpgalab from "./assets/syllabus/fpga lab.jpg";
 import dspU1 from "./assets/Unit_1_Notes.pdf";
+import dspobservation1to5 from "/pdffiles/DSP_observation_1-5.pdf"
 
 export const PASS = {
-
   sub0: "dco001",
   sub1: "dsp002",
   sub2: "wco003",
@@ -25,8 +25,7 @@ export const PASS = {
   sub7: "mp008",
   sub8: "sspd009",
   sub9: "dsp010",
-  sub10: "fpga011"
-  
+  sub10: "fpga011",
 };
 
 export const SUBJECTS = [
@@ -41,7 +40,6 @@ export const SUBJECTS = [
   "Soft Skills And Personality Development Laboratory",
   "Digital Signal Processing (Integrated Lab)",
   "PE-1[Digital Dising with FPGA(Integrated Lab)",
-
 ];
 
 export const LABS = [
@@ -51,7 +49,6 @@ export const LABS = [
   "Digital Signal Processing (Integrated Lab)",
   "PE-1[Digital Dising with FPGA(Integrated Lab)",
 ];
-
 
 export const FILES = {
   scheduleImg,
@@ -67,7 +64,7 @@ export const FILES = {
     mp,
     skillslab,
     dsplab,
-    fpgalab
+    fpgalab,
   ],
 
   notes: [
@@ -161,21 +158,26 @@ export const FILES = {
     },
   ],
 
-  records: Array(4).fill(null),
-  pyq:     Array(8).fill(0).map(() => Array(2).fill(null)),
+  records: [
+    dspobservation1to5,
+  ],
+  pyq: [
+  ["https://example.com/paper1.pdf", "https://example.com/paper2.pdf"],
+  ["", "https://example.com/paper4.pdf"],
+  ["https://example.com/paper5.pdf", "https://example.com/paper6.pdf"],
+  ["https://example.com/paper7.pdf", "https://example.com/paper8.pdf"],
+  ["https://example.com/paper9.pdf", "https://example.com/paper10.pdf"],
+  ["https://example.com/paper11.pdf", "https://example.com/paper12.pdf"],
+  ["https://example.com/paper13.pdf", "https://example.com/paper14.pdf"],
+  ["https://example.com/paper15.pdf", "https://example.com/paper16.pdf"],
+]
+  // pyq: Array(SUBJECTS.length)
+  //   .fill(0)
+  //   .map((_, i) => (i === 0 ? [dspU1, dspU1] : [null, null])),
+    
+    
+    
+
+  // pyq:     Array(8).fill(0).map(() => Array(2).fill(dspU1)),
 };
 
-// export const FILES = {
-//   scheduleImg,
-//   timetableImg: null,
-//   syllabusImgs: Array(8).fill(null),
-//   notes: Array(8).fill(0).map(() => ({
-//     units: [
-//       dspU1,
-//     ],
-//     // units:     Array(5).fill(dspU1),
-//     internals: Array(3).fill(null),
-//   })),
-//   records: Array(4).fill(null),
-//   pyq:     Array(8).fill(0).map(() => Array(2).fill(null)),
-// };

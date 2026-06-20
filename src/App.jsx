@@ -13,10 +13,10 @@ import PdfCard from "./components/PdfCard";
 import { Portfolio } from "./components/SubjectCard";
 
 export default function App() {
-  const [user, setUser]       = useState(() => getUser());
-  const [view, setView]       = useState("home");
-  const [subIdx, setSubIdx]   = useState(null);
-  const [modal, setModal]     = useState(null);
+  const [user, setUser] = useState(() => getUser());
+  const [view, setView] = useState("home");
+  const [subIdx, setSubIdx] = useState(null);
+  const [modal, setModal] = useState(null);
   const [pwInput, setPwInput] = useState("");
   const [pwTarget, setPwTarget] = useState("");
   const [pwError, setPwError] = useState("");
@@ -53,16 +53,16 @@ export default function App() {
     }
   };
 
-  const goHome    = () => { setView("home"); setSubIdx(null); };
+  const goHome = () => { setView("home"); setSubIdx(null); };
   const goSection = () => setSubIdx(null);
 
   const HOME_ITEMS = [
-    { id: "schedule",  label: "Semester Schedule", icon: "", desc: "Full semester plan" },
-    { id: "timetable", label: "Time Table",         icon: "", desc: "Weekly class schedule" },
-    { id: "syllabus",  label: "Syllabus",           icon: "", desc: "8 subjects covered" },
-    { id: "notes",     label: "Notes",              icon: "", desc: "5 units + internal QPs" },
-    { id: "records",   label: "Lab Record PDFs",    icon: "", desc: "4 lab records" },
-    { id: "pyq",       label: "Prev. Year Papers",  icon: "", desc: "2 papers per subject" },
+    { id: "schedule", label: "Semester Schedule", icon: "", desc: "Full semester plan" },
+    { id: "timetable", label: "Time Table", icon: "", desc: "Weekly class schedule" },
+    { id: "syllabus", label: "Syllabus", icon: "", desc: "8 subjects covered" },
+    { id: "notes", label: "Notes", icon: "", desc: "5 units + internal QPs" },
+    { id: "records", label: "Lab Record PDFs", icon: "", desc: "4 lab records" },
+    { id: "pyq", label: "Prev. Year Papers", icon: "", desc: "2 papers per subject" },
   ];
 
   const PW_REF = [
@@ -71,11 +71,11 @@ export default function App() {
 
   // Initials avatar
   const initials = (user?.name || "?")
-  .split(" ")
-  .map(w => w[0])
-  .join("")
-  .toUpperCase()
-  .slice(0, 2);
+    .split(" ")
+    .map(w => w[0])
+    .join("")
+    .toUpperCase()
+    .slice(0, 2);
 
   // ── VIEWS ────────────────────────────────────────────────────
   let content;
@@ -94,7 +94,7 @@ export default function App() {
           }}>
             <div>
               <h1 style={{ color: D.text, fontSize: "1.6rem", fontWeight: 700, margin: 0, fontFamily: "Georgia, serif" }}>
-                Hey, {user.name.split(" ")[0]} 
+                Hey, {user.name.split(" ")[0]}
               </h1>
               <p style={{ color: D.sub, margin: "0.25rem 0 0", fontSize: "0.85rem" }}>
                 {user.dept} · Section {user.section} · {user.batch}
@@ -252,9 +252,11 @@ export default function App() {
         <Breadcrumb parts={["Previous Year Papers", SUBJECTS[subIdx]]} />
         <PageTitle icon="" title={SUBJECTS[subIdx]} />
         <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-          {FILES.pyq[subIdx].map((url, pi) => (
-            <PdfCard key={pi} title={`Previous Year Paper — ${pi === 0 ? "Paper 1" : "Paper 2"}`} url={url} />
-          ))}
+          {Array.isArray(FILES.pyq[subIdx])
+            ? FILES.pyq[subIdx].map((url, pi) => (
+              <PdfCard key={pi} title={`Previous Year Paper — ${pi === 0 ? "Paper 1" : "Paper 2"}`} url={url} />
+            ))
+            : null}
         </div>
       </div>
     ) : (
