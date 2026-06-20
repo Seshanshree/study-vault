@@ -59,7 +59,7 @@ export default function App() {
   const HOME_ITEMS = [
     { id: "schedule", label: "Semester Schedule", icon: "", desc: "Full semester plan" },
     { id: "timetable", label: "Time Table", icon: "", desc: "Weekly class schedule" },
-    { id: "syllabus", label: "Syllabus", icon: "", desc: "8 subjects covered" },
+    { id: "syllabus", label: "Syllabus", icon: "", desc: "11 subjects covered" },
     { id: "notes", label: "Notes", icon: "", desc: "5 units + internal QPs" },
     { id: "records", label: "Lab Record PDFs", icon: "", desc: "4 lab records" },
     { id: "pyq", label: "Prev. Year Papers", icon: "", desc: "2 papers per subject" },

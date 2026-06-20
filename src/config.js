@@ -46,6 +46,7 @@ export const LABS = [
   "Analog And Digital Communication Laboratory",
   "Mini - Project",
   "Soft Skills And Personality Development Laboratory",
+  "Digital Signal Processing (Integrated Lab)(1 to 5)",
   "Digital Signal Processing (Integrated Lab)",
   "PE-1[Digital Dising with FPGA(Integrated Lab)",
 ];
