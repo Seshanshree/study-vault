@@ -12,18 +12,19 @@ import skillslab from "./assets/syllabus/skills lab.jpg";
 import dsplab from "./assets/timetable.jpeg";
 import fpgalab from "./assets/syllabus/fpga lab.jpg";
 import dspU1 from "./assets/Unit_1_Notes.pdf";
-import dspobservation1to5 from "/pdffiles/DSP_observation_1-5.pdf"
+import dspobservation1to5 from "/pdffiles/DSP_observation_1-5.pdf";
+import adclab from "/pdffiles/ADC LAB.pdf"
 
 export const PASS = {
-  sub0: "dco001",
-  sub1: "dsp002",
-  sub2: "wco003",
-  sub3: "rfs004",
-  sub4: "fpga005",
-  sub5: "had006",
-  sub6: "adc007",
-  sub7: "mp008",
-  sub8: "sspd009",
+  sub0: "dc01",
+  sub1: "dsp02",
+  sub2: "wc03",
+  sub3: "rfs04",
+  sub4: "fpga05",
+  sub5: "had06",
+  sub6: "adc07",
+  sub7: "mp08",
+  sub8: "sspd09",
   sub9: "dsp010",
   sub10: "fpga011",
 };
@@ -160,7 +161,7 @@ export const FILES = {
   ],
 
   records: [
-    "",
+    adclab,
     "",
     "",
     dspobservation1to5,
