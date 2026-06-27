@@ -55,6 +55,9 @@ export default function App() {
 
   const goHome = () => { setView("home"); setSubIdx(null); };
   const goSection = () => setSubIdx(null);
+  const openPrevSemNotes = () => {
+    window.open("https://notesweb-seshan-vidhya.vercel.app/", "_blank", "noopener,noreferrer");
+  };
 
   const HOME_ITEMS = [
     { id: "schedule", label: "Semester Schedule", icon: "", desc: "Full semester plan" },
@@ -120,6 +123,24 @@ export default function App() {
               onClick={() => setView(item.id)}
             />
           ))}
+        </div>
+
+        <div style={{ marginTop: "1rem" }}>
+          <button
+            onClick={openPrevSemNotes}
+            style={{
+              background: D.primary,
+              color: "white",
+              border: "none",
+              borderRadius: "10px",
+              padding: "0.7rem 1rem",
+              cursor: "pointer",
+              fontWeight: 600,
+              fontSize: "0.9rem",
+            }}
+          >
+            Prev Sem Notes
+          </button>
         </div>
 
         <div style={{ marginTop: "2rem", borderTop: `1px solid ${D.border}`, paddingTop: "1.5rem" }}>

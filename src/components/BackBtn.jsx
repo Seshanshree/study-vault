@@ -9,9 +9,10 @@ export default function BackBtn({ onClick }) {
       onMouseEnter={() => setHov(true)}
       onMouseLeave={() => setHov(false)}
       style={{
-        background: "none", border: "none", cursor: "pointer",
-        color: hov ? D.primary : D.sub,
-        padding: "0.2rem 0", marginBottom: "1rem", fontSize: "0.85rem",
+        border: "1px inset brown",borderRadius:"10px",
+        background: "brown", padding: "8px 20px", cursor: "pointer",
+        color: hov ? D.primary : "white",
+         marginBottom: "1rem", fontSize: "0.85rem",
       }}
     >
       Back
