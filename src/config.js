@@ -106,7 +106,7 @@ export const FILES = {
     // 3 — Embedded Systems
     {
       units: [
-        "YOUR_EMB_UNIT1_URL",
+        "",
         "YOUR_EMB_UNIT2_URL",
         "YOUR_EMB_UNIT3_URL",
         "YOUR_EMB_UNIT4_URL",
