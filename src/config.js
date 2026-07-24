@@ -14,6 +14,7 @@ import fpgalab from "./assets/syllabus/fpga lab.jpg";
 //import dspU1 from "./assets/Unit_1_Notes.pdf";
 import dspobservation1to5 from "/pdffiles/DSP_observation_1-5.pdf";
 import adclab from "/pdffiles/ADC LAB.pdf"
+import dc1 from "/pdffiles/DC unit-1.pdf"
 
 export const PASS = {
   sub0: "dc7",
@@ -73,7 +74,7 @@ export const FILES = {
     // 0 — Digital Signal Processing
     {
       units: [
-        "pdffiles/DC unit-1.pdf",
+        dc1,
         "",
         "",
         "",
