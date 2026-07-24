@@ -143,7 +143,7 @@ export default function App() {
           </button>
         </div>
 
-        <div style={{ marginTop: "2rem", borderTop: `1px solid ${D.border}`, paddingTop: "1.5rem" }}>
+        <div style={{display:"none", marginTop: "2rem", borderTop: `1px solid ${D.border}`, paddingTop: "1.5rem" }}>
           <button
             onClick={() => setShowPws(p => !p)}
             style={{
@@ -210,7 +210,7 @@ export default function App() {
         <BackBtn onClick={goHome} />
         <PageTitle icon="" title="Syllabus" />
         <p style={{ color: D.sub, fontSize: "0.85rem", marginBottom: "1.5rem" }}>Choose a subject to view its syllabus image.</p>
-        <SubjectGrid subjects={SUBJECTS} onSelect={i => askPw(PASS[`sub${i}`], () => setSubIdx(i))} />
+        <SubjectGrid subjects={SUBJECTS} onSelect={i => setSubIdx(i)} />
       </div>
     );
   }
