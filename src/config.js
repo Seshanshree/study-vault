@@ -11,7 +11,6 @@ import mp from "./assets/syllabus/miniproject.jpg";
 import skillslab from "./assets/syllabus/skills lab.jpg";
 import dsplab from "./assets/timetable.jpeg";
 import fpgalab from "./assets/syllabus/fpga lab.jpg";
-//import dspU1 from "./assets/Unit_1_Notes.pdf";
 import dspobservation1to5 from "/pdffiles/DSP_observation_1-5.pdf";
 import adclab from "/pdffiles/ADC LAB.pdf";
 import dc1 from "/pdffiles/DC unit-1.pdf";
