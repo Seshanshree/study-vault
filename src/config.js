@@ -173,7 +173,7 @@ export const FILES = {
   ],
   pyq: [
   ["", ""],
-  ["dspqp1", "dspqp2"],
+  [dspqp1, dspqp2],
   ["", ""],
   ["", ""],
   ["", ""],
