@@ -143,7 +143,7 @@ export default function App() {
           </button>
         </div>
 
-        <div style={{display:"none", marginTop: "2rem", borderTop: `1px solid ${D.border}`, paddingTop: "1.5rem" }}>
+        <div style={{ display: "none", marginTop: "2rem", borderTop: `1px solid ${D.border}`, paddingTop: "1.5rem" }}>
           <button
             onClick={() => setShowPws(p => !p)}
             style={{
@@ -218,6 +218,9 @@ export default function App() {
   else if (view === "notes") {
     if (subIdx !== null) {
       const d = FILES.notes[subIdx];
+      const unitTitles = d.unitTitles ?? d.units.map((_, ui) => `Unit ${ui + 1} — Notes`);
+      const internalTitles = d.internalTitles ?? d.internals.map((_, ii) => `Internal ${ii + 1} — Question Paper`);
+
       content = (
         <div>
           <BackBtn onClick={goSection} />
@@ -225,16 +228,19 @@ export default function App() {
           <PageTitle icon="" title={SUBJECTS[subIdx]} />
           <div style={{ fontWeight: 600, marginBottom: "0.5rem", marginTop: "1rem" }}>Unit Notes</div>
           <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem", marginBottom: "1.5rem" }}>
-            {d.units.map((url, ui) =>
-              ui === 5
-                ? <PdfCard key={ui} title="Unit 5 — Notes" comingSoon />
-                : <PdfCard key={ui} title={`Unit ${ui + 1} — Notes`} url={url} />
-            )}
+            {d.units.map((url, ui) => (
+              <PdfCard
+                key={ui}
+                title={unitTitles[ui] || `Unit ${ui + 1} — Notes`}
+                url={url}
+                comingSoon={!url}
+              />
+            ))}
           </div>
           <div style={{ fontWeight: 600, marginBottom: "0.5rem" }}>Internal Question Papers</div>
           <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
             {d.internals.map((url, ii) => (
-              <PdfCard key={ii} title={`Internal ${ii + 1} — Question Paper`} url={url} />
+              <PdfCard key={ii} title={internalTitles[ii] || `Internal ${ii + 1} — Question Paper`} url={url} />
             ))}
           </div>
         </div>
@@ -258,9 +264,10 @@ export default function App() {
         <PageTitle icon="" title="Lab Record PDFs" />
         <p style={{ color: D.sub, fontSize: "0.85rem", marginBottom: "1.5rem" }}>Record PDFs for all 4 labs in Semester 5.</p>
         <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-          {LABS.map((lab, i) => (
-            <PdfCard key={i} title={`${lab} — Record`} url={FILES.records[i]} />
-          ))}
+          {LABS.map((lab, i) => {
+            const record = FILES.records[i] || {};
+            return <PdfCard key={i} title={record.title || `${lab} — Record`} url={record.url || ""} />;
+          })}
         </div>
       </div>
     );

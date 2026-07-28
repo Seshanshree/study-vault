@@ -19,7 +19,7 @@ import dspqp1 from "/pdffiles/DSP QP1.pdf";
 import dspqp2 from "/pdffiles/DSP QP2.pdf";
 import wc1 from "/pdffiles/wc_unit_1.pptx";
 import wc2 from "/pdffiles/wc_unit_2.pptx";
-
+import wciat1 from "/pdffiles/wc IAT1.pdf";
 
 export const PASS = {
   sub0: "dc7",
@@ -78,118 +78,167 @@ export const FILES = {
   notes: [
     // 0 — Digital Communication
     {
-      units: [
-        dc1,
-        "",
-        "",
-        "",
-        "",
+      units: [dc1, "", "", "", ""],
+      unitTitles: [
+        "DC Unit 1 — Notes",
+        "Unit 2 — Notes",
+        "Unit 3 — Notes",
+        "Unit 4 — Notes",
+        "Unit 5 — Notes",
       ],
       internals: [null, null, null],
+      internalTitles: [
+        "Internal 1 — Question Paper",
+        "Internal 2 — Question Paper",
+        "Internal 3 — Question Paper",
+      ],
     },
     // 1 — Digital Signal Processing
     {
-      units: [
-        dspU1,
-        "",
-        "",
-        "",
-        "",
+      units: [dspU1, "", "", "", ""],
+      unitTitles: [
+        "DSP Unit 1 — Notes",
+        "Unit 2 — Notes",
+        "Unit 3 — Notes",
+        "Unit 4 — Notes",
+        "Unit 5 — Notes",
       ],
       internals: [null, null, null],
+      internalTitles: [
+        "Internal 1 — Question Paper",
+        "Internal 2 — Question Paper",
+        "Internal 3 — Question Paper",
+      ],
     },
     // 2 — Wireless Communication
     {
-      units: [
-        wc1,
-        wc2,
-        "",
-        "",
-        "",
-        "",
+      units: [wc1, wc2, "", "", ""],
+      unitTitles: [
+        "WC Unit 1 — Notes",
+        "WC Unit 2 — Notes",
+        "Unit 3 — Notes",
+        "Unit 4 — Notes",
+        "Unit 5 — Notes",
       ],
-      internals: [null, null, null],
+      internals: [wciat1, null, null],
+      internalTitles: [
+        "WC IAT 1 — Question and Answer",
+        "Internal 2 — Question Paper",
+        "Internal 3 — Question Paper",
+      ],
     },
     // 3 — Embedded Systems
     {
-      units: [
-        "",
-        "",
-        "",
-        "",
-        "",
+      units: ["", "", "", "", ""],
+      unitTitles: [
+        "Unit 1 — Notes",
+        "Unit 2 — Notes",
+        "Unit 3 — Notes",
+        "Unit 4 — Notes",
+        "Unit 5 — Notes",
       ],
       internals: [null, null, null],
+      internalTitles: [
+        "Internal 1 — Question Paper",
+        "Internal 2 — Question Paper",
+        "Internal 3 — Question Paper",
+      ],
     },
     // 4 — Computer Networks
     {
-      units: [
-        "",
-        "",
-        "",
-        "",
-        "",
+      units: ["", "", "", "", ""],
+      unitTitles: [
+        "Unit 1 — Notes",
+        "Unit 2 — Notes",
+        "Unit 3 — Notes",
+        "Unit 4 — Notes",
+        "Unit 5 — Notes",
       ],
       internals: [null, null, null],
+      internalTitles: [
+        "Internal 1 — Question Paper",
+        "Internal 2 — Question Paper",
+        "Internal 3 — Question Paper",
+      ],
     },
     // 5 — Control Systems
     {
-      units: [
-        "",
-        "",
-        "",
-        "",
-        "",
+      units: ["", "", "", "", ""],
+      unitTitles: [
+        "Unit 1 — Notes",
+        "Unit 2 — Notes",
+        "Unit 3 — Notes",
+        "Unit 4 — Notes",
+        "Unit 5 — Notes",
       ],
       internals: [null, null, null],
+      internalTitles: [
+        "Internal 1 — Question Paper",
+        "Internal 2 — Question Paper",
+        "Internal 3 — Question Paper",
+      ],
     },
     // 6 — Microprocessors & Controllers
     {
-      units: [
-       "",
-        "",
-        "",
-        "",
-        "",
+      units: ["", "", "", "", ""],
+      unitTitles: [
+        "Unit 1 — Notes",
+        "Unit 2 — Notes",
+        "Unit 3 — Notes",
+        "Unit 4 — Notes",
+        "Unit 5 — Notes",
       ],
       internals: [null, null, null],
+      internalTitles: [
+        "Internal 1 — Question Paper",
+        "Internal 2 — Question Paper",
+        "Internal 3 — Question Paper",
+      ],
     },
     // 7 — Optical Communication
     {
-      units: [
-        "",
-        "",
-        "",
-        "",
-        "",
+      units: ["", "", "", "", ""],
+      unitTitles: [
+        "Unit 1 — Notes",
+        "Unit 2 — Notes",
+        "Unit 3 — Notes",
+        "Unit 4 — Notes",
+        "Unit 5 — Notes",
       ],
       internals: [null, null, null],
+      internalTitles: [
+        "Internal 1 — Question Paper",
+        "Internal 2 — Question Paper",
+        "Internal 3 — Question Paper",
+      ],
     },
   ],
 
   records: [
-    adclab,
-    "",
-    "",
-    dspobservation1to5,
-    "",
+    { url: adclab, title: "ADC Lab — Record" },
+    { url: "", title: "Mini - Project — Record" },
+    {
+      url: "",
+      title: "Soft Skills And Personality Development Laboratory — Record",
+    },
+    {
+      url: dspobservation1to5,
+      title: "DSP Integrated Lab Observation — Record",
+    },
+    { url: "", title: "FPGA Lab — Record" },
   ],
   pyq: [
-  ["", ""],
-  [dspqp1, dspqp2],
-  ["", ""],
-  ["", ""],
-  ["", ""],
-  ["", ""],
-  ["", "https://example.com/paper16.pdf"],
-]
+    ["", ""],
+    [dspqp1, dspqp2],
+    ["", ""],
+    ["", ""],
+    ["", ""],
+    ["", ""],
+    ["", "https://example.com/paper16.pdf"],
+  ],
   // pyq: Array(SUBJECTS.length)
   //   .fill(0)
   //   .map((_, i) => (i === 0 ? [dspU1, dspU1] : [null, null])),
-    
-    
-    
 
   // pyq:     Array(8).fill(0).map(() => Array(2).fill(dspU1)),
 };
-
