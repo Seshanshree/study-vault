@@ -17,12 +17,14 @@ import dc1 from "/pdffiles/DC unit-1.pdf";
 import dspU1 from "/pdffiles/DSP internal Assessment-1 portion.pdf";
 import dspqp1 from "/pdffiles/DSP QP1.pdf";
 import dspqp2 from "/pdffiles/DSP QP2.pdf";
+import wc1 from "/pdffiles/wc_unit_1.pptx";
+import wc2 from "/pdffiles/wc_unit_2.pptx";
 
 
 export const PASS = {
   sub0: "dc7",
   sub1: "dsp5",
-  sub2: "wc3",
+  sub2: "wire",
   sub3: "rfs1",
   sub4: "fpga9",
   sub5: "had0",
@@ -99,7 +101,8 @@ export const FILES = {
     // 2 — Wireless Communication
     {
       units: [
-        "",
+        wc1,
+        wc2,
         "",
         "",
         "",
