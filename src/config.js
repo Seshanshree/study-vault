@@ -20,12 +20,13 @@ import dspqp2 from "/pdffiles/DSP QP2.pdf";
 import wc1 from "/pdffiles/wc_unit_1.pptx";
 import wc2 from "/pdffiles/wc_unit_2.pptx";
 import wciat1 from "/pdffiles/wc IAT1.pdf";
+import tlrf1 from "/pdffiles/TL&RF unit-1.pdf";
 
 export const PASS = {
   sub0: "dc7",
   sub1: "dsp5",
   sub2: "wire",
-  sub3: "rfs1",
+  sub3: "rfv",
   sub4: "fpga9",
   sub5: "had0",
   sub6: "adc",
@@ -127,9 +128,9 @@ export const FILES = {
         "Internal 3 — Question Paper",
       ],
     },
-    // 3 — Embedded Systems
+    // 3 — Transmission Lines And RF Systems
     {
-      units: ["", "", "", "", ""],
+      units: [tlrf1, "", "", "", ""],
       unitTitles: [
         "Unit 1 — Notes",
         "Unit 2 — Notes",
