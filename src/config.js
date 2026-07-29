@@ -23,6 +23,7 @@ import wciat1 from "/pdffiles/wc IAT1.pdf";
 import tlrf1 from "/pdffiles/TL&RF unit-1.pdf";
 import tlrf2 from "/pdffiles/TL&RF unit-2 IAT-1 portion.pdf";
 import tlrfqp1 from "/pdffiles/tlrfqp1.pdf";
+import tlrfqp2 from "/pdffiles/tlrfqp2.pdf";
 
 export const PASS = {
   sub0: "dc7",
@@ -234,7 +235,7 @@ export const FILES = {
     ["", ""],
     [dspqp1, dspqp2],
     ["", ""],
-    [tlrfqp1],
+    [tlrfqp1, tlrfqp2],
     ["", ""],
     ["", ""],
     ["", "https://example.com/paper16.pdf"],
