@@ -21,6 +21,8 @@ import wc1 from "/pdffiles/wc_unit_1.pptx";
 import wc2 from "/pdffiles/wc_unit_2.pptx";
 import wciat1 from "/pdffiles/wc IAT1.pdf";
 import tlrf1 from "/pdffiles/TL&RF unit-1.pdf";
+import tlrf2 from "/pdffiles/TL&RF unit-2 IAT-1 portion.pdf";
+import tlrfqp1 from "/pdffiles/tlrfqp1.pdf";
 
 export const PASS = {
   sub0: "dc7",
@@ -130,7 +132,7 @@ export const FILES = {
     },
     // 3 — Transmission Lines And RF Systems
     {
-      units: [tlrf1, "", "", "", ""],
+      units: [tlrf1, tlrf2, "", "", ""],
       unitTitles: [
         "Unit 1 — Notes",
         "Unit 2 — Notes",
@@ -232,7 +234,7 @@ export const FILES = {
     ["", ""],
     [dspqp1, dspqp2],
     ["", ""],
-    ["", ""],
+    [tlrfqp1],
     ["", ""],
     ["", ""],
     ["", "https://example.com/paper16.pdf"],

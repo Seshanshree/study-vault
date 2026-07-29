@@ -1,8 +1,8 @@
 // ── PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL HERE ──────────
 // const SHEET_WEBHOOK = "https://script.google.com/macros/s/AKfycbype2iW_-X7in3X4SDX_GXJtBi2HipLc2qAzmJVqL2vsSSoWQa_nmhsOOKRxZtq-hFo/exec";
 const SHEET_WEBHOOK = import.meta.env.VITE_SHEET_WEBHOOK;
-const KEY      = "sv_user";
-const ALL_KEY  = "sv_all_users";
+const KEY = "sv_user";
+const ALL_KEY = "sv_all_users";
 
 // ── Helpers ─────────────────────────────────────────────────
 
@@ -10,7 +10,9 @@ export function getUser() {
   try {
     const raw = localStorage.getItem(KEY);
     return raw ? JSON.parse(raw) : null;
-  } catch { return null; }
+  } catch {
+    return null;
+  }
 }
 
 export function clearUser() {
@@ -21,24 +23,24 @@ export function getAllUsers() {
   try {
     const raw = localStorage.getItem(ALL_KEY);
     return raw ? JSON.parse(raw) : [];
-  } catch { return []; }
+  } catch {
+    return [];
+  }
 }
 
 // ── Send to Google Sheet ─────────────────────────────────────
 
 async function syncToSheet(userData) {
   try {
-    console.log("Syncing to sheet:", userData); // ← add this
+    console.log("Syncing to sheet:", userData);
     const params = new URLSearchParams({
-      name:     userData.name,
-      rollNo:   userData.rollNo,
-      dept:     userData.dept,
+      name: userData.name,
       joinedAt: userData.joinedAt,
     });
     const url = `${SHEET_WEBHOOK}?${params}`;
-    console.log("Fetch URL:", url); // ← add this
+    console.log("Fetch URL:", url);
     await fetch(url, { method: "GET", mode: "no-cors" });
-    console.log("Fetch done"); // ← add this
+    console.log("Fetch done");
   } catch (err) {
     console.warn("Sheet sync failed:", err);
   }
@@ -54,7 +56,7 @@ export async function registerUser(userData) {
 
   // Update local list
   const all = getAllUsers();
-  const idx = all.findIndex(u => u.rollNo === userData.rollNo);
+  const idx = all.findIndex((u) => u.rollNo === userData.rollNo);
   if (idx >= 0) {
     all[idx] = { ...all[idx], ...user };
   } else {
@@ -73,7 +75,7 @@ export async function registerUser(userData) {
 export function loginUser(rollNo, pin) {
   const all = getAllUsers();
   const found = all.find(
-    u => u.rollNo.toLowerCase() === rollNo.toLowerCase() && u.pin === pin
+    (u) => u.rollNo.toLowerCase() === rollNo.toLowerCase() && u.pin === pin,
   );
   if (found) {
     localStorage.setItem(KEY, JSON.stringify(found));
@@ -81,6 +83,3 @@ export function loginUser(rollNo, pin) {
   }
   return null;
 }
-
-
-

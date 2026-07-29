@@ -27,8 +27,6 @@ const inputStyle = (err) => ({
 
 export default function LoginPage({ onAuth }) {
   const [name, setName] = useState("");
-  const [rollNo, setRollNo] = useState("");
-  const [dept, setDept] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -37,14 +35,10 @@ export default function LoginPage({ onAuth }) {
   const handleRegister = async () => {
     setError("");
     if (!name.trim()) return setError("Please enter your name.");
-    if (!rollNo.trim()) return setError("Please enter your roll number.");
-    if (!dept.trim()) return setError("Please enter your department.");
 
     setLoading(true);
     const user = await registerUser({
       name: name.trim(),
-      rollNo: rollNo.trim().toUpperCase(),
-      dept: dept.trim(),
     });
     setLoading(false);
     onAuth(user);
@@ -84,7 +78,7 @@ export default function LoginPage({ onAuth }) {
       }}>
         <div style={{ padding: "1.5rem" }}>
           <p style={{ margin: "0 0 1.25rem", color: D.sub, fontSize: "0.85rem" }}>
-            Create your profile with your basic details.
+            Create your profile with your name.
           </p>
 
           {field("Full Name",
@@ -92,22 +86,6 @@ export default function LoginPage({ onAuth }) {
               onKeyDown={onKey(handleRegister)}
               placeholder="e.g. Seshanshree M"
               style={inputStyle(error && !name)}
-            />
-          )}
-
-          {field("Roll Number",
-            <input value={rollNo} onChange={e => { setRollNo(e.target.value); clearErr(); }}
-              onKeyDown={onKey(handleRegister)}
-              placeholder="e.g. 24ECE044"
-              style={inputStyle(error && !rollNo)}
-            />
-          )}
-
-          {field("Department",
-            <input value={dept} onChange={e => { setDept(e.target.value); clearErr(); }}
-              onKeyDown={onKey(handleRegister)}
-              placeholder="e.g. ECE"
-              style={inputStyle(error && !dept)}
             />
           )}
 
