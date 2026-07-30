@@ -460,7 +460,7 @@ export default function App() {
               boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
             }}
           >
-            <div style={{ fontWeight: 600, color: D.text }}>Meet the Developer</div>
+            <div style={{ fontWeight: 600, color: D.text,fontSize: "0.80rem" }}>Meet the Developer <span style={{ fontWeight: 400,fontSize: "0.80rem" }}> (Seshanshree M)</span></div>
             <div style={{ fontSize: "1.3rem", color: D.primary }}>→</div>
           </div>
 
@@ -473,7 +473,7 @@ export default function App() {
                 rel="noreferrer"
                 style={{ color: D.primary, textDecoration: "none" }}
               >
-                LinkedIn profile
+                LinkedIn
               </a>
             </div>
             <div>Thanks to my friends <br></br> <span style={{ color: D.text, fontWeight: 600 }}>Kownisha S [ECE - III Year] </span><br></br><span style={{ color: D.text, fontWeight: 600 }}>Naveena M [ECE - III Year] </span></div>
