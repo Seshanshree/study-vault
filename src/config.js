@@ -24,13 +24,14 @@ import tlrf1 from "/pdffiles/TL&RF unit-1.pdf";
 import tlrf2 from "/pdffiles/TL&RF unit-2 IAT-1 portion.pdf";
 import tlrfqp1 from "/pdffiles/tlrfqp1.pdf";
 import tlrfqp2 from "/pdffiles/tlrfqp2.pdf";
+import fpga1 from "/pdffiles/fpga1.pdf";
 
 export const PASS = {
   sub0: "dc7",
   sub1: "dsp5",
   sub2: "wire",
   sub3: "rfv",
-  sub4: "fpga9",
+  sub4: "fpgaa",
   sub5: "had0",
   sub6: "adc",
   sub7: "mp",
@@ -148,9 +149,9 @@ export const FILES = {
         "Internal 3 — Question Paper",
       ],
     },
-    // 4 — Computer Networks
+    // 4 — Digital design with FPGA
     {
-      units: ["", "", "", "", ""],
+      units: [fpga1, "", "", "", ""],
       unitTitles: [
         "Unit 1 — Notes",
         "Unit 2 — Notes",
@@ -165,41 +166,7 @@ export const FILES = {
         "Internal 3 — Question Paper",
       ],
     },
-    // 5 — Control Systems
-    {
-      units: ["", "", "", "", ""],
-      unitTitles: [
-        "Unit 1 — Notes",
-        "Unit 2 — Notes",
-        "Unit 3 — Notes",
-        "Unit 4 — Notes",
-        "Unit 5 — Notes",
-      ],
-      internals: [null, null, null],
-      internalTitles: [
-        "Internal 1 — Question Paper",
-        "Internal 2 — Question Paper",
-        "Internal 3 — Question Paper",
-      ],
-    },
-    // 6 — Microprocessors & Controllers
-    {
-      units: ["", "", "", "", ""],
-      unitTitles: [
-        "Unit 1 — Notes",
-        "Unit 2 — Notes",
-        "Unit 3 — Notes",
-        "Unit 4 — Notes",
-        "Unit 5 — Notes",
-      ],
-      internals: [null, null, null],
-      internalTitles: [
-        "Internal 1 — Question Paper",
-        "Internal 2 — Question Paper",
-        "Internal 3 — Question Paper",
-      ],
-    },
-    // 7 — Optical Communication
+    // 5 — Human Assist Devices
     {
       units: ["", "", "", "", ""],
       unitTitles: [
@@ -237,8 +204,7 @@ export const FILES = {
     ["", ""],
     [tlrfqp1, tlrfqp2],
     ["", ""],
-    ["", ""],
-    ["", "https://example.com/paper16.pdf"],
+    ["", ""]
   ],
   // pyq: Array(SUBJECTS.length)
   //   .fill(0)

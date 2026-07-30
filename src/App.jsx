@@ -80,6 +80,8 @@ export default function App() {
     .toUpperCase()
     .slice(0, 2);
 
+  const visibleSubjects = SUBJECTS.slice(0, 6);
+
   // ── VIEWS ────────────────────────────────────────────────────
   let content;
 
@@ -251,7 +253,7 @@ export default function App() {
           <BackBtn onClick={goHome} />
           <PageTitle icon="" title="Notes" />
           <p style={{ color: D.sub, fontSize: "0.85rem", marginBottom: "1.5rem" }}>Choose a subject to access unit notes and internal question papers.</p>
-          <SubjectGrid subjects={SUBJECTS} onSelect={i => askPw(PASS[`sub${i}`], () => setSubIdx(i))} />
+          <SubjectGrid subjects={visibleSubjects} onSelect={i => askPw(PASS[`sub${i}`], () => setSubIdx(i))} />
         </div>
       );
     }
@@ -292,7 +294,7 @@ export default function App() {
         <BackBtn onClick={goHome} />
         <PageTitle icon="" title="Previous Year Papers" />
         <p style={{ color: D.sub, fontSize: "0.85rem", marginBottom: "1.5rem" }}>Choose a subject to view its previous year question papers.</p>
-        <SubjectGrid subjects={SUBJECTS} onSelect={i => askPw(PASS[`sub${i}`], () => setSubIdx(i))} />
+        <SubjectGrid subjects={visibleSubjects} onSelect={i => askPw(PASS[`sub${i}`], () => setSubIdx(i))} />
       </div>
     );
   }
@@ -461,8 +463,24 @@ export default function App() {
             <div style={{ fontWeight: 600, color: D.text }}>Meet the Developer</div>
             <div style={{ fontSize: "1.3rem", color: D.primary }}>→</div>
           </div>
+
+          <div style={{marginTop: "1rem", marginBottom: "1rem", color: D.sub, fontSize: "0.9rem", lineHeight: 1.6 }}>
+            <div>
+              Special thanks to my AkkA <span style={{ color: D.text, fontWeight: 600 }}>Vidhya R [ECE - III Year] </span> —{' '}
+              <a
+                href="https://www.linkedin.com/in/vidhya-r-6456a8387 "
+                target="_blank"
+                rel="noreferrer"
+                style={{ color: D.primary, textDecoration: "none" }}
+              >
+                LinkedIn profile
+              </a>
+            </div>
+            <div>Thanks to my friends <span style={{ color: D.text, fontWeight: 600 }}>Kounish S [ECE - III Year] </span> and <span style={{ color: D.text, fontWeight: 600 }}>Naveena M [ECE - III Year] </span></div>
+          </div>
         </footer>
       )}
     </div>
+    
   );
 }
