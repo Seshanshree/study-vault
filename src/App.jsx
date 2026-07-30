@@ -466,7 +466,7 @@ export default function App() {
 
           <div style={{marginTop: "1rem", marginBottom: "1rem", color: D.sub, fontSize: "0.9rem", lineHeight: 1.6 }}>
             <div>
-              Special thanks to my AkkA <span style={{ color: D.text, fontWeight: 600 }}>Vidhya R [ECE - III Year] </span> —{' '}
+              Special thanks to my AkkA <br></br> <span style={{ color: D.text, fontWeight: 600 }}>Vidhya R [ECE - III Year] </span> —{' '}
               <a
                 href="https://www.linkedin.com/in/vidhya-r-6456a8387 "
                 target="_blank"
@@ -476,7 +476,7 @@ export default function App() {
                 LinkedIn profile
               </a>
             </div>
-            <div>Thanks to my friends <span style={{ color: D.text, fontWeight: 600 }}>Kounish S [ECE - III Year] </span> and <span style={{ color: D.text, fontWeight: 600 }}>Naveena M [ECE - III Year] </span></div>
+            <div>Thanks to my friends <br></br> <span style={{ color: D.text, fontWeight: 600 }}>Kownisha S [ECE - III Year] </span><br></br><span style={{ color: D.text, fontWeight: 600 }}>Naveena M [ECE - III Year] </span></div>
           </div>
         </footer>
       )}
