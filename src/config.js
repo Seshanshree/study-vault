@@ -25,6 +25,7 @@ import tlrf2 from "/pdffiles/TL&RF unit-2 IAT-1 portion.pdf";
 import tlrfqp1 from "/pdffiles/tlrfqp1.pdf";
 import tlrfqp2 from "/pdffiles/tlrfqp2.pdf";
 import fpga1 from "/pdffiles/fpga1.pdf";
+import hadiat1 from "/pdffiles/HAD-IAT-1.pdf";
 
 export const PASS = {
   sub0: "dc7",
@@ -32,7 +33,7 @@ export const PASS = {
   sub2: "wire",
   sub3: "rfv",
   sub4: "fpgaa",
-  sub5: "had0",
+  sub5: "hads",
   sub6: "adc",
   sub7: "mp",
   sub8: "sspd",
@@ -176,9 +177,9 @@ export const FILES = {
         "Unit 4 — Notes",
         "Unit 5 — Notes",
       ],
-      internals: [null, null, null],
+      internals: [hadiat1, null, null],
       internalTitles: [
-        "Internal 1 — Question Paper",
+        "Internal 1 - Question with Answer",
         "Internal 2 — Question Paper",
         "Internal 3 — Question Paper",
       ],
