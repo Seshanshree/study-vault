@@ -1,5 +1,6 @@
-import scheduleImg from "./assets/schedule.jpeg";
-import timetableImg from "./assets/timetable.jpeg";
+import scheduleImg from "./assets/schedule.jpeg"; //sem schedule
+import timetableImg from "./assets/timetable.jpeg"; //timetable
+// syllabus images
 import dco from "./assets/syllabus/dco.jpg";
 import dsp from "./assets/syllabus/dsp.jpg";
 import wco from "./assets/syllabus/wco.jpg";
@@ -11,21 +12,33 @@ import mp from "./assets/syllabus/miniproject.jpg";
 import skillslab from "./assets/syllabus/skills lab.jpg";
 import dsplab from "./assets/timetable.jpeg";
 import fpgalab from "./assets/syllabus/fpga lab.jpg";
+//lab files
 import dspobservation1to5 from "/pdffiles/DSP_observation_1-5.pdf";
 import adclab from "/pdffiles/ADC LAB.pdf";
+//dc
 import dc1 from "/pdffiles/DC unit-1.pdf";
+import dc23 from "/pdffiles/DC unit-2&3.pdf";
+//dsp
 import dspU1 from "/pdffiles/DSP internal Assessment-1 portion.pdf";
 import dspqp1 from "/pdffiles/DSP QP1.pdf";
 import dspqp2 from "/pdffiles/DSP QP2.pdf";
+//wireless communication
 import wc1 from "/pdffiles/wc_unit_1.pptx";
 import wc2 from "/pdffiles/wc_unit_2.pptx";
 import wciat1 from "/pdffiles/wc IAT1.pdf";
+//rf and transmission lines
 import tlrf1 from "/pdffiles/TL&RF unit-1.pdf";
-import tlrf2 from "/pdffiles/TL&RF unit-2 IAT-1 portion.pdf";
+import tlrf2 from "/pdffiles/TL&RF unit-2 IAT-1 portion.pdf"; 
 import tlrfqp1 from "/pdffiles/tlrfqp1.pdf";
 import tlrfqp2 from "/pdffiles/tlrfqp2.pdf";
+import tlrfiat2 from "/pdffiles/tlrf_iat2.pdf";
+import tlrf_assignment_iat2 from "/pdffiles/tlrf_assignment_iat2.pdf";
+
+//fpga
 import fpga1 from "/pdffiles/fpga1.pdf";
+//human assist devices
 import hadiat1 from "/pdffiles/HAD-IAT-1.pdf";
+
 
 export const PASS = {
   sub0: "dc7",
@@ -84,13 +97,13 @@ export const FILES = {
   notes: [
     // 0 — Digital Communication
     {
-      units: [dc1, "", "", "", ""],
+      units: [dc1, dc23,],
       unitTitles: [
         "DC Unit 1 — Notes",
-        "Unit 2 — Notes",
-        "Unit 3 — Notes",
-        "Unit 4 — Notes",
-        "Unit 5 — Notes",
+        "DC Unit 2 & 3 — Notes",
+        //"Unit 3 — Notes",
+        //"Unit 4 — Notes",
+        //"Unit 5 — Notes",
       ],
       internals: [null, null, null],
       internalTitles: [
@@ -135,12 +148,12 @@ export const FILES = {
     },
     // 3 — Transmission Lines And RF Systems
     {
-      units: [tlrf1, tlrf2, "", "", ""],
+      units: [tlrf1, tlrf2, tlrfiat2, tlrf_assignment_iat2],
       unitTitles: [
         "Unit 1 — Notes",
         "Unit 2 — Notes",
-        "Unit 3 — Notes",
-        "Unit 4 — Notes",
+        "IAT - 2 Notes",
+        "IAT - 2 Assignment",
         "Unit 5 — Notes",
       ],
       internals: [null, null, null],
