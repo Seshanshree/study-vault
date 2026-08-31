@@ -22,6 +22,10 @@ import dc23 from "/pdffiles/DC unit-2&3.pdf";
 import dspU1 from "/pdffiles/DSP internal Assessment-1 portion.pdf";
 import dspqp1 from "/pdffiles/DSP QP1.pdf";
 import dspqp2 from "/pdffiles/DSP QP2.pdf";
+import dspu2 from "/pdffiles/DSP_Unit_2_Notes.pdf";
+import dspu21 from "/pdffiles/DSP_unit_2_IIR _DESIGN_PBMS-2.pdf";
+import dspu22 from "/pdffiles/DSP_unit_2_IIR DESIGN-DESIGN STEPS-1.pdf";
+import dspu23 from "/pdffiles/DSP-Unit 2- IIR filter Design.pdf";
 //wireless communication
 import wc1 from "/pdffiles/wc_unit_1.pptx";
 import wc2 from "/pdffiles/wc_unit_2.pptx";
@@ -114,13 +118,13 @@ export const FILES = {
     },
     // 1 — Digital Signal Processing
     {
-      units: [dspU1, "", "", "", ""],
+      units: [dspU1, dspu2, dspu21, dspu22, dspu23],
       unitTitles: [
-        "DSP Unit 1 — Notes",
+        "Unit 1 — Notes",
         "Unit 2 — Notes",
-        "Unit 3 — Notes",
-        "Unit 4 — Notes",
-        "Unit 5 — Notes",
+        "Unit 2 - IIR Design PBMS-2",
+        "Unit 2 - IIR Design - Design Steps-1",
+        "Unit 2 - IIR Filter Design",
       ],
       internals: [null, null, null],
       internalTitles: [
