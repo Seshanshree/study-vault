@@ -30,6 +30,7 @@ import dspu23 from "/pdffiles/DSP-Unit 2- IIR filter Design.pdf";
 import wc1 from "/pdffiles/wc_unit_1.pptx";
 import wc2 from "/pdffiles/wc_unit_2.pptx";
 import wciat1 from "/pdffiles/wc IAT1.pdf";
+import wciat2 from "/pdffiles/WC IAT-2.pdf";
 //rf and transmission lines
 import tlrf1 from "/pdffiles/TL&RF unit-1.pdf";
 import tlrf2 from "/pdffiles/TL&RF unit-2 IAT-1 portion.pdf"; 
@@ -135,18 +136,18 @@ export const FILES = {
     },
     // 2 — Wireless Communication
     {
-      units: [wc1, wc2, "", "", ""],
+      units: [wc1, wc2, wciat2, "", ""],
       unitTitles: [
         "WC Unit 1 — Notes",
         "WC Unit 2 — Notes",
-        "Unit 3 — Notes",
+        "IAT 2 — Notes",
         "Unit 4 — Notes",
         "Unit 5 — Notes",
       ],
-      internals: [wciat1, null, null],
+      internals: [wciat1, wciat2, null],
       internalTitles: [
         "WC IAT 1 — Question and Answer",
-        "Internal 2 — Question Paper",
+        "WC IAT 2 — Question and Answer",
         "Internal 3 — Question Paper",
       ],
     },
