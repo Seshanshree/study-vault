@@ -38,6 +38,7 @@ import tlrfqp1 from "/pdffiles/tlrfqp1.pdf";
 import tlrfqp2 from "/pdffiles/tlrfqp2.pdf";
 import tlrfiat2 from "/pdffiles/tlrf_iat2.pdf";
 import tlrf_assignment_iat2 from "/pdffiles/tlrf_assignment_iat2.pdf";
+import tlrf_iat2 from "/pdffiles/TL & RF internal -2 10 mark.pdf";
 
 //fpga
 import fpga1 from "/pdffiles/fpga1.pdf";
@@ -153,18 +154,18 @@ export const FILES = {
     },
     // 3 — Transmission Lines And RF Systems
     {
-      units: [tlrf1, tlrf2, tlrfiat2, tlrf_assignment_iat2],
+      units: [tlrf1, tlrf2, tlrfiat2, tlrf_assignment_iat2,tlrf_iat2],
       unitTitles: [
         "Unit 1 — Notes",
         "Unit 2 — Notes",
         "IAT - 2 Notes",
         "IAT - 2 Assignment",
-        "Unit 5 — Notes",
+        "IAT - 2 10 Mark Notes",
       ],
-      internals: [null, null, null],
+      internals: [null, tlrf_iat2, null],
       internalTitles: [
         "Internal 1 — Question Paper",
-        "Internal 2 — Question Paper",
+        "Internal 2 — Answer",
         "Internal 3 — Question Paper",
       ],
     },

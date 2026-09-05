@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { D } from "../tokens";
 
-export default function HomeCard({ icon, label, desc, onClick }) {
+export default function HomeCard({ icon, label, desc, onClick, compact = false }) {
   const [hov, setHov] = useState(false);
   return (
     <div
@@ -16,7 +16,11 @@ export default function HomeCard({ icon, label, desc, onClick }) {
           : `linear-gradient(145deg, ${D.card}, ${D.surface})`,
         border: `1px solid ${hov ? D.borderHov : D.border}`,
         borderRadius: "14px",
-        padding: "1rem",
+        padding: compact ? "0.65rem 1rem" : "1rem",
+        minHeight: compact ? "48px" : undefined,
+        display: compact ? "flex" : undefined,
+        alignItems: compact ? "center" : undefined,
+        gap: compact ? "0.75rem" : undefined,
         cursor: "pointer",
         transition: "transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease",
         transform: hov ? "translateY(-6px) rotateX(5deg) scale(1.01)" : "translateY(0) rotateX(0deg) scale(1)",
@@ -27,9 +31,11 @@ export default function HomeCard({ icon, label, desc, onClick }) {
       }}
     >
       <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(255,255,255,0.28), transparent 45%)", pointerEvents: "none" }} />
-      <div style={{ fontSize: "1.5rem", marginBottom: "0.5rem" }}>{icon}</div>
-      <div style={{ fontWeight: 600, marginBottom: "0.25rem" }}>{label}</div>
-      <div style={{ color: D.sub, fontSize: "0.8rem" }}>{desc}</div>
+      <div style={{ fontSize: "1.5rem", marginBottom: compact ? 0 : "0.5rem" }}>{icon}</div>
+      <div style={{ flex: compact ? 1 : undefined }}>
+        <div style={{ fontWeight: 600, marginBottom: compact ? 0 : "0.25rem", whiteSpace: compact ? "nowrap" : undefined }}>{label}</div>
+        <div style={{ color: D.sub, fontSize: "0.8rem" }}>{desc}</div>
+      </div>
     </div>
   );
 }

@@ -58,6 +58,9 @@ export default function App() {
   const openPrevSemNotes = () => {
     window.open("https://notesweb-seshan-vidhya.vercel.app/", "_blank", "noopener,noreferrer");
   };
+  const openMotivation = () => {
+    window.open("https://italk-imaxx.vercel.app/", "_blank", "noopener,noreferrer");
+  };
 
   const HOME_ITEMS = [
     { id: "schedule", label: "Semester Schedule", icon: "", desc: "Full semester plan" },
@@ -116,6 +119,18 @@ export default function App() {
             }}>
               {user.rollNo}
             </div>
+          </div>
+        </div>
+
+        <div style={{ display: "flex", justifyContent: "center", marginBottom: "1rem" }}>
+          <div style={{ width: "min(100%, 360px)" }}>
+            <HomeCard
+              icon=""
+              label="Motivate YourSelf - iTaLk"
+              desc="Take a motivating break"
+              onClick={openMotivation}
+              compact
+            />
           </div>
         </div>
 
@@ -460,11 +475,11 @@ export default function App() {
               boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
             }}
           >
-            <div style={{ fontWeight: 600, color: D.text,fontSize: "0.80rem" }}>Meet the Developer <span style={{ fontWeight: 400,fontSize: "0.80rem" }}> (Seshanshree M)</span></div>
+            <div style={{ fontWeight: 600, color: D.text, fontSize: "0.80rem" }}>Meet the Developer <span style={{ fontWeight: 400, fontSize: "0.80rem" }}> (Seshanshree M)</span></div>
             <div style={{ fontSize: "1.3rem", color: D.primary }}>→</div>
           </div>
 
-          <div style={{marginTop: "1rem", marginBottom: "1rem", color: D.sub, fontSize: "0.9rem", lineHeight: 1.6 }}>
+          <div style={{ marginTop: "1rem", marginBottom: "1rem", color: D.sub, fontSize: "0.9rem", lineHeight: 1.6 }}>
             <div>
               Special thanks to my AkkA <br></br> <span style={{ color: D.text, fontWeight: 600 }}>Vidhya R [ECE - III Year] </span> —{' '}
               <a
@@ -481,6 +496,6 @@ export default function App() {
         </footer>
       )}
     </div>
-    
+
   );
 }
