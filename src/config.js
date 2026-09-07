@@ -175,7 +175,7 @@ export const FILES = {
       units: [fpga1, fpgaiat2, "", "", ""],
       unitTitles: [
         "Unit 1 — Notes",
-        "Unit 2 — Notes",
+        "Unit 3,4 — Notes",
         "Unit 3 — Notes",
         "Unit 4 — Notes",
         "Unit 5 — Notes",
