@@ -42,6 +42,7 @@ import tlrf_iat2 from "/pdffiles/TL & RF internal -2 10 mark.pdf";
 
 //fpga
 import fpga1 from "/pdffiles/fpga1.pdf";
+import fpgaiat2 from "/pdffiles/gpgaiat2.pdf";
 //human assist devices
 import hadiat1 from "/pdffiles/HAD-IAT-1.pdf";
 
@@ -171,7 +172,7 @@ export const FILES = {
     },
     // 4 — Digital design with FPGA
     {
-      units: [fpga1, "", "", "", ""],
+      units: [fpga1, fpgaiat2, "", "", ""],
       unitTitles: [
         "Unit 1 — Notes",
         "Unit 2 — Notes",
