@@ -13,11 +13,16 @@ import skillslab from "./assets/syllabus/skills lab.jpg";
 import dsplab from "./assets/timetable.jpeg";
 import fpgalab from "./assets/syllabus/fpga lab.jpg";
 //lab files
-import dspobservation1to5 from "/pdffiles/DSP_observation_1-5.pdf";
-import adclab from "/pdffiles/ADC LAB.pdf";
+import dsplabpdf from "/pdffiles/DSP Lab .pdf";
+import adclabold from "/pdffiles/ADC LAB old.pdf";
+import adclabcurrent from "/pdffiles/ADC LAB current.pdf";
+import adclabsimulation from "/pdffiles/ADC Simulation expt.pdf";
+import fpgalabpdf from "/pdffiles/FPGA lab record.pdf";
+import softskillslab from "/pdffiles/English record .pdf";
 //dc
 import dc1 from "/pdffiles/DC unit-1.pdf";
-import dc23 from "/pdffiles/DC unit-2&3.pdf";
+import dc2 from "/pdffiles/DC unit-2.pdf";
+import dc3 from "/pdffiles/DC Unit-3.pdf";
 //dsp
 import dspU1 from "/pdffiles/DSP internal Assessment-1 portion.pdf";
 import dspqp1 from "/pdffiles/DSP QP1.pdf";
@@ -39,7 +44,6 @@ import tlrfqp2 from "/pdffiles/tlrfqp2.pdf";
 import tlrfiat2 from "/pdffiles/tlrf_iat2.pdf";
 import tlrf_assignment_iat2 from "/pdffiles/tlrf_assignment_iat2.pdf";
 import tlrf_iat2 from "/pdffiles/TL & RF internal -2 10 mark.pdf";
-
 //fpga
 import fpga1 from "/pdffiles/fpga1.pdf";
 import fpgaiat2 from "/pdffiles/fpgaiat2.pdf";
@@ -48,12 +52,12 @@ import hadiat1 from "/pdffiles/HAD-IAT-1.pdf";
 
 
 export const PASS = {
-  sub0: "dc7",
-  sub1: "dsp5",
-  sub2: "wire",
-  sub3: "rfv",
-  sub4: "fpgaa",
-  sub5: "hads",
+  sub0: "dcdc",
+  sub1: "dspvs",
+  sub2: "wireless",
+  sub3: "tlrfs",
+  sub4: "ddwfpga",
+  sub5: "hadss",
   sub6: "adc",
   sub7: "mp",
   sub8: "sspd",
@@ -104,11 +108,11 @@ export const FILES = {
   notes: [
     // 0 — Digital Communication
     {
-      units: [dc1, dc23,],
+      units: [dc1, dc2,dc3],
       unitTitles: [
         "DC Unit 1 — Notes",
-        "DC Unit 2 & 3 — Notes",
-        //"Unit 3 — Notes",
+        "DC Unit 2 — Notes",
+        "DC Unit 3 — Notes",
         //"Unit 4 — Notes",
         //"Unit 5 — Notes",
       ],
@@ -207,17 +211,15 @@ export const FILES = {
   ],
 
   records: [
-    { url: adclab, title: "ADC Lab — Record" },
-    { url: "", title: "Mini - Project — Record" },
+    { url: adclabold, title: "ADC Lab — Old Record" },
+    { url: adclabcurrent, title: "ADC Lab — Record" },
+    { url: adclabsimulation, title: "ADC Lab — Simulation" },
+    { url: softskillslab, title: "Soft Skills And Personality Development Laboratory — Record"},
     {
-      url: "",
-      title: "Soft Skills And Personality Development Laboratory — Record",
+      url: dsplabpdf,
+      title: "DSP Integrated Lab — Record",
     },
-    {
-      url: dspobservation1to5,
-      title: "DSP Integrated Lab Observation — Record",
-    },
-    { url: "", title: "FPGA Lab — Record" },
+    { url: fpgalabpdf, title: "FPGA Lab — Record" },
   ],
   pyq: [
     ["", ""],

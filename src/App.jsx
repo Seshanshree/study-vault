@@ -160,7 +160,7 @@ export default function App() {
           </button>
         </div>
 
-        <div style={{ display: "none", marginTop: "2rem", borderTop: `1px solid ${D.border}`, paddingTop: "1.5rem" }}>
+        <div style={{  marginTop: "2rem", borderTop: `1px solid ${D.border}`, paddingTop: "1.5rem" }}>
           <button
             onClick={() => setShowPws(p => !p)}
             style={{
@@ -345,7 +345,7 @@ export default function App() {
         boxShadow: "0 6px 18px rgba(0, 0, 0, 0.06)",
       }}>
         <button onClick={goHome} style={{ background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center", gap: "0.5rem", padding: 0, fontWeight: 700, fontSize: "1rem", color: D.text, fontFamily: "Georgia, serif" }}>
-          StudyVault
+          StudyVault by Seshan..
         </button>
 
         <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
