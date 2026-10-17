@@ -20,7 +20,7 @@ export default function App() {
   const [pwInput, setPwInput] = useState("");
   const [pwTarget, setPwTarget] = useState("");
   const [pwError, setPwError] = useState("");
-  const [showPws, setShowPws] = useState(false);
+  const [showPws, setShowPws] = useState(true);
   const [showUserMenu, setShowUserMenu] = useState(false);
 
   // ── Auth ────────────────────────────────────────────────────
